@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@media screen and(min-width: 1024px){
+
+    .Editor{
+        margin-bottom:5rem;
+
+        .editor-buttons{
+            width:17%;
+            margin:1rem 1rem;
+
+            .button{
+                margin:1rem 0rem;
+            }
+        }
+        
+        .one{
+            margin-left: 0.9rem;
+        }
+
+        .editor-all{
+            display:flex;
+            justify-content: space-between;
+            margin:1rem ;
+        }
+        .editor-list{
+            width:25%;
+
+            .editor-block{
+                margin-top:2rem;
+
+                h5{
+                    font-size: 0.8rem;
+                }
+            
+            
+        
+                    .editor-proj{
+                    display:flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top:1.5rem;
+                    border-bottom: 1px solid gray;
+                    
+
+                    p{
+                        font-size:0.8rem;
+                        margin-bottom:1rem;
+                    }
+                    
+                    .title{
+                        border:none;
+                        background-color: white;
+                        margin-bottom:1rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        
+        }
+
+        .editor-form{
+            margin-bottom:4rem;
+            width: 65%;
+        }
+}
+    
+}
+

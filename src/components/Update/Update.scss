@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@media screen and (min-width: 1024px){
+
+.Update{
+    padding:1rem;
+
+    .message{
+        font-weight: 600;
+        width:100%;
+    }
+
+    .alert{
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top:1rem;
+        color:red;
+        width:100%;
+    }
+
+    .close{
+        font-size: 1.5rem;
+        border:none;
+        cursor:pointer;
+        background-color:white;
+    }
+    
+    .box-message{
+        
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        width:100%;
+        border-bottom: 1px solid gray;
+        
+
+       h2{
+           margin:1rem;
+           font-size: 1.5rem;
+       }
+        
+    
+    }
+
+    .update-header{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+
+        .update-message{
+            width:100%;
+        }
+    
+
+    }
+
+    .update-inner{
+       
+        width:100%;
+
+
+        .update{
+            margin:2rem 0rem;
+            font-size: 0.9rem;
+
+            .alert{
+                font-size: 0.8rem;
+                color:red;
+                
+               
+            }
+                   
+            p{
+                
+                font-weight: 600;
+                color:black;
+                margin-bottom:0.5rem;
+            }
+            p:nth-child(2) {
+                color:rgb(238, 105, 202);
+                font-size: 0.8rem;
+            }
+    
+
+            input[type="text"],input[type="link"], input[type="number"]{
+                width:100%;
+                border:none;
+                border-bottom: 1px solid gray;
+                padding: 1rem 0;
+                margin-top:1rem;
+                
+
+                &:focus{
+                    outline: none;
+                    border-color: red;
+                }
+            }
+
+            textarea{
+                margin-top:1rem;
+                resize:none;
+                border:none;
+                outline:none;
+                width:90%;
+                height:100px;
+            }
+
+       
+            .alert{
+                margin-top:1rem;
+                font-size: 0.8rem;
+                color:red; 
+            }
+                   
+            select{
+                    width:200px;
+                    font-size:0.9rem;
+                    font-weight: 600;
+                    border:none;
+                    outline:none;
+                    background-color: white;
+                    margin:1rem 0rem;
+                   
+
+            }
+          
+
+            .check{
+                margin-top: 0.3rem;
+                width:40%;
+                display: flex;
+                align-items: center;
+    
+                p{
+                    margin-right:0.6rem;
+                }
+            }
+
+        }
+        
+        .button-box{
+            width:25%;
+            display:flex;
+            justify-content: space-between;
+        }
+
+        .delete-box{
+            margin-top:0.7rem;
+
+            p{
+                font-size: 0.8rem;
+                color:rgb(0, 140, 255);
+                font-weight: 600;
+            }
+
+
+            .delete-button-box{
+                width:25%;
+                display:flex;
+                justify-content: space-between;
+                margin-top:2rem;
+            }
+        }
+
+      
+    }
+}
+}
