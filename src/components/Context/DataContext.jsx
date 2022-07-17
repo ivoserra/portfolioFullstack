@@ -15,16 +15,14 @@ export default function DataContextProvider(props){
 
     
     const [ project, setProject]=useState({})
-    const [ library, setLibrary]=useState()
+ 
     const [ message , setMessage]=useState("")
     
     // data from mongoose
     const [ data, setData]=useState([])
   
-    const [ mainDataUpdate, setMainDataUpdate] = useState(false)
-
-       // alert messages
     
+    // variables for each input on the forms for creating a project or update a project
     const [ title , setTitle ]= useState('')
     const [ year, setYear ]= useState()
     const [ description, setDescription ]= useState('')
@@ -37,16 +35,15 @@ export default function DataContextProvider(props){
     const [ author, setAuthor ]= useState('')
     const [ type, setType ]=useState("")
 
-    
+    const [ render, setRender]=useState(false)
 
 
     useEffect(()=>{
 
-        fetch("http://localhost:8000/project")
+        fetch(" https://ivoserrawebdev.herokuapp.com/project")
         .then(response=> response.json())
         .then(result => {
             if(result.confirm){
-                setLibrary(result.project)
                 setMessage(result.message)
                 setData(result.project)
                 console.log('fetch')
@@ -55,14 +52,14 @@ export default function DataContextProvider(props){
         })
         .catch(error => console.log(error.message))
 
-    },[])
+    },[render])
 
 
 
     const contextData = { 
-        data,
+        data, setData,
         type, setType,
-        title,setTitle,
+        title, setTitle,
         year, setYear,
         description, setDescription,
         tools, setTools,
@@ -72,13 +69,10 @@ export default function DataContextProvider(props){
         author, setAuthor,
         image,setImage, 
         video, setVideo, 
-        library, setLibrary, 
         project, setProject, 
         message, setMessage, 
         project, setProject,
-        mainDataUpdate, setMainDataUpdate,
-        
-        
+        render, setRender,    
     }
   
   

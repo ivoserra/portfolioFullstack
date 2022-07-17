@@ -6,6 +6,7 @@ import {storage} from "../../firebase.js"
 import { DataContext } from '../Context/DataContext.jsx'
 
 import './ImageUpload.scss'
+import { UserContext } from '../Context/UserContext.jsx'
 
 
 
@@ -13,6 +14,7 @@ import './ImageUpload.scss'
 export default function ImageUpload({projID, mongoImage}){
 
     const { image, setImage }=useContext(DataContext)
+    const { visitor }=useContext(UserContext)
 
     const [ progress, setProgress]= useState(0)
     const [ imageUrl, setImageUrl]= useState()
@@ -21,6 +23,7 @@ export default function ImageUpload({projID, mongoImage}){
 
     function formHandler(e){
         e.preventDefault()
+        if(visitor){return}
         setImageUrl(URL.createObjectURL(img.current.files[0]))
         //console.log('URL.createObjectURL(img.current.files[0]', URL.createObjectURL(img.current.files[0]))
         const url = uploadFile(img.current.files[0])
@@ -30,7 +33,8 @@ export default function ImageUpload({projID, mongoImage}){
     
     function uploadFile(file){
         //console.log(file)
-        if(!file) return;
+        if(visitor){return}
+        if(!file) {return};
         const storageRef = ref(storage, `/files/image/${file.name}`);
         const uploadTask = uploadBytesResumable(storageRef, file)
 
@@ -47,11 +51,10 @@ export default function ImageUpload({projID, mongoImage}){
 
     }
 
-    console.log(image)
 
 
     function deleteImage(){
-
+        if(visitor){return}
         if(image){
         const storage = getStorage()
         const videoRef=ref(storage, `${image}`)
@@ -77,7 +80,7 @@ export default function ImageUpload({projID, mongoImage}){
             }).catch((error)=>{
                 console.log(error)
             })
-            const url = `http://localhost:8000/project/${projID}`
+            const url = `https://ivoserrawebdev.herokuapp.com/project/${projID}`
             
             const payload={ image:"" }
             console.log(payload)
@@ -100,6 +103,9 @@ export default function ImageUpload({projID, mongoImage}){
     return(
         <section className="Video">
         <div className="file">
+        <div className="image-container">
+         {image || mongoImage ? <img src={image || mongoImage} width="620" height="240"></img> : null }
+        </div>
         <section className="input-video">
             <input ref={img}  type="file" accept="image/*" className="input"/>
             {image || mongoImage ? null : <button className="button" type="submit" onClick={formHandler}>Upload</button> }
@@ -109,9 +115,7 @@ export default function ImageUpload({projID, mongoImage}){
 
         <h3>Uploaded {progress} % </h3>
         </div>
-        <div className="image-container">
-         {image || mongoImage ? <img src={image || mongoImage} width="620" height="240"></img> : null }
-        </div>
+     
         </section>
     )
 }

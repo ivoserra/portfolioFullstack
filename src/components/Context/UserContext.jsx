@@ -5,71 +5,76 @@ import {useState}from 'react'
 export const UserContext =React.createContext(null)
 
 export default function UserContextProvider(props){
-    
-    
+
+
+// to open the dashboard is login is true
 const [ login, setLogin ] = useState(false)
-const [ update, setUpdate ] = useState(false)
+
+// condition to distinguish admin from visitor
+const [ visitor, setVisitor ] = useState(false)
+
+// set the user when logged
+const [ user, setUser ] = useState('')
+
+// to confirm if the user has authority for create and delete projects
+const [ authorization, setAuthorization]=useState(false)
+
+// to open a window to update or edit a project
+const [ updateProject, setUpdateProject ] = useState(false)
+
+// to open the window of a new project to create
 const [ newProject, setNewProject ] = useState(false)
-const [ confirm, setConfirm ] = useState(false)
+
+
+// condition when a project is successfully submited 
+const [ successful, setSuccessful ] = useState(false)
+
+// state for delete button
 const [ deleteButton, setDeleteButton ] = useState(false)
+
+// state variable for specific alert messages from the backend
 const [ alert, setAlert ] = useState('')
 
 
-const [ alertUser, setAlertUser ] = useState('')
-const [ alertPassword, setAlertPassword ] = useState('')
-const [ alertType, setAlertType ] = useState('')
-const [ alertTitle, setAlertTitle ] = useState("")
-const [ alertYear, setAlertYear ] = useState("")
-const [ alertDescription, setAlertDescription ] = useState('')
-const [ alertTools, setAlertTools ] = useState('')
-const [ alertDeploy, setAlertDeploy ] = useState('')
-const [ alertRepository, setAlertRepository ] = useState('')
-const [ alertVideo, setAlertVideo ] = useState('')
-const [ alertImage, setAlertImage ] = useState('')
-const [ alertAuthor, setAlertAuthor ] = useState('')
-const [ alertRegName, setAlertRegName ] = useState('')
-const [ alertRegPass, setAlertRegPass ] = useState('')
-const [ alertReg, setAlertReg ] = useState('')
+// register to open or close the register form
+const [ register, setRegister ] = useState(false)
 
-const [ name, setName ] = useState('')
-const [ password, setPassword ] = useState('')
-const [ regName, setRegName]=useState('')
-const [ regPass, setRegPass]=useState('')
-const [ visitor, setVisitor ] = useState(false)
-const [ user, setUser ] = useState('')
+// state for specific messages from backend
+const [ registerMsg, setRegisterMsg ] = useState('')
+
+// state for specific messages on backend 
+const [ message, setMessage ]=useState('')
+
+// state to warn user when visitor that cannot perform admin actions
+const [ alertUser, setAlertUser ] = useState('')
+const [ alertReg, setAlertReg ] = useState('')
+const [ alertVisitorMsg, setAlertVisitorMsg] = useState('')
+
+
 
 const contextUser = {
 
     login, setLogin,
-    update, setUpdate,
+    updateProject, setUpdateProject,
     newProject, setNewProject,
-    confirm, setConfirm,
+    successful, setSuccessful,
+    register, setRegister,
+    registerMsg, setRegisterMsg,
+    message, setMessage,
+
     alert, setAlert,
     alertUser, setAlertUser,
-    alertPassword, setAlertPassword,
-    alertType, setAlertType,
-    alertTitle, setAlertTitle,
-    alertYear,setAlertYear,
-    alertDescription, setAlertDescription,
-    alertTools, setAlertTools,
-    alertDeploy, setAlertDeploy,
-    alertRepository, setAlertRepository,
-    alertVideo, setAlertVideo,
-    alertImage, setAlertImage,
-    alertAuthor, setAlertAuthor,
-    name, setName,
-    password, setPassword,
+    
+
+    alertVisitorMsg, setAlertVisitorMsg,
+   
     deleteButton, setDeleteButton,
-    alertRegName,setAlertRegName,
-    alertRegPass, setAlertRegPass,
     alertReg, setAlertReg,
     visitor, setVisitor,
-    regName,setRegName,
-    regPass, setRegPass,
-    user, setUser 
+ 
+    user, setUser,
+    authorization, setAuthorization, 
    
-   
-
 }
 
 

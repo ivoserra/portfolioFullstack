@@ -77,7 +77,7 @@ export default function VideoUpload({projID, mongoVideo}){
             }).catch((error)=>{
                 console.log(error)
             })
-            const url = `http://localhost:8000/project/${projID}`
+            const url = `https://ivoserrawebdev.herokuapp.com/project/${projID}`
             
             const payload={ video:""}
             console.log(payload)
@@ -100,6 +100,12 @@ export default function VideoUpload({projID, mongoVideo}){
     return(
         <section className="Video">
         <div className="file">
+        <div>
+         {video || mongoVideo ? <video width="420" controls>
+              <source src={video || mongoVideo} type="video/mp4"></source>
+              <source src={video || mongoVideo} type="video/webm"></source>
+          </video> : <></> }
+        </div>
 
         <section className="input-video">
             <input ref={img} type="file" accept="video/*" className="input"/>
@@ -110,16 +116,7 @@ export default function VideoUpload({projID, mongoVideo}){
 
         <h3>Uploaded {progress} % </h3>
         </div>
-        <div>
-         {video || mongoVideo ? <video width="420" controls>
-              <source src={video || mongoVideo} type="video/mp4"></source>
-              <source src={video || mongoVideo} type="video/webm"></source>
-          </video> : <></> }
-
-          
-
-
-        </div>
+  
         </section>
     )
 }

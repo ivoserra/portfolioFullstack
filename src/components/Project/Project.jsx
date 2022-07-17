@@ -6,7 +6,7 @@ import { DataContext } from '../Context/DataContext.jsx'
 import { motion} from 'framer-motion'
 import './project.scss'
 import AnimatedPage from '../Animation/AnimatedPage.jsx'
-import Work from '../Work/Work.jsx'
+
 
 
 

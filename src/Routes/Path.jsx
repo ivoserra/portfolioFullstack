@@ -5,9 +5,9 @@ import { Route, Routes, Switch, useLocation } from "react-router-dom";
 import About from '../components/About/About.jsx'
 import Home from "../components/Home/Home.jsx";
 import Project from "../components/Project/Project.jsx";
-import Work from '../components/Work/Work.jsx'
+import NavBar from '../components/NavBar/NavBar.jsx'
 import Error from '../components/Error/Error.jsx'
-import Login from '../components/Login/Login.jsx'
+import LoginPage from '../components/LogInPage/LoginPage.jsx'
 
 
 export default function Path(){
@@ -23,9 +23,9 @@ export default function Path(){
             
                     <Route path="/" index element={<Home/>}/>
                     <Route path="about" element={<About/>}/>
-                    <Route path="dashboard" element={<Login/>}/>
+                    <Route path="dashboard" element={<LoginPage/>}/>
 
-                    <Route path="work" element={<Work/>}>
+                    <Route path="work" element={<NavBar/>}>
                         <Route path=":workName" element={<Project/>}/>
                     </Route>
 
