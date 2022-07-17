@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { UserContext } from '../Context/UserContext'
 
-import './Login.scss'
+import './LoginPage.scss'
 
 export const Login = () => {
 

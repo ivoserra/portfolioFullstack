@@ -2,7 +2,7 @@ import { useState, useContext, useEffect } from "react"
 import { DataContext } from "../Context/DataContext.jsx"
 
 import { UserContext } from "../Context/UserContext.jsx"
-import "./Editor.scss"
+import "./Dashboard.scss"
 import CreateProject from "../CreateProject/CreateProject.jsx"
 import EditProject from "../EditProject/EditProject.jsx"
 
@@ -13,7 +13,7 @@ export default function Dashboard(){
     
     const { data, setProject }=useContext(DataContext)
 
-    const { setSuccessful, updateProject, setUpdateProject, newProject, setNewProject, setLogin,setAlert, user, setUser
+    const { setSuccessful, updateProject, setUpdateProject, newProject, setNewProject, setLogin,setAlert, user, setUser, setRegisterMsg
     
     } = useContext(UserContext) 
     
@@ -65,6 +65,7 @@ export default function Dashboard(){
               setUser('')
               setLogin(false)
               setVisitor(false)
+              setRegisterMsg('')
             }
            
         })

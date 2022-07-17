@@ -5,7 +5,7 @@ import { UserContext } from "../Context/UserContext.jsx"
 import Dashboard from '../Dashboard/Dashboard.jsx'
 import { Login } from "./Login.jsx"
 
-import './Login.scss'
+import './LoginPage.scss'
 import { Register } from "./Register.jsx"
 
 
@@ -16,7 +16,7 @@ export default function LoginPage(){
 
 
     const {
-        setAlert, setMessage, login,setLogin, register, registerMsg, message,
+        setAlert, setMessage, login,setLogin, register, registerMsg, setRegisterMsg, message,
         
     } = useContext(UserContext)
 
@@ -27,6 +27,7 @@ export default function LoginPage(){
         setLogin(false)
         setAlert('')
         setMessage('')
+        setRegisterMsg('')
        
     }
 

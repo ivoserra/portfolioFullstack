@@ -4,7 +4,7 @@ import VideoUpload from '../VideoUpload/VideoUpload.jsx'
 import { DataContext } from '../Context/DataContext.jsx'
 import ImageUpload from '../ImageUpload/ImageUpload.jsx'
 import { UserContext } from '../Context/UserContext.jsx'
-import './Create.scss'
+import './CreateProject.scss'
 
 
 

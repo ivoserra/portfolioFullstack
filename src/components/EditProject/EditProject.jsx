@@ -3,7 +3,7 @@ import { DataContext } from "../Context/DataContext"
 import VideoUpload from "../VideoUpload/VideoUpload.jsx"
 import  {ref,getStorage, deleteObject} from 'firebase/storage'
 
-import "./Update.scss"
+import "./EditProject.scss"
 import ImageUpload from "../ImageUpload/ImageUpload"
 import { UserContext } from "../Context/UserContext"
 
