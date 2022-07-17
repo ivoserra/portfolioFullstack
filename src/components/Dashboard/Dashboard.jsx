@@ -13,14 +13,10 @@ export default function Dashboard(){
     
     const { data, setProject }=useContext(DataContext)
 
-    const { setSuccessful, updateProject, setUpdateProject, newProject, setNewProject, setLogin,setAlert, user, setUser, setRegisterMsg
-    
-    } = useContext(UserContext) 
+    const { setSuccessful, updateProject, setUpdateProject, newProject, setNewProject, setLogin,setAlert, user, setUser, setRegisterMsg } = useContext(UserContext) 
     
    
-
-    
-    
+    // separating data from type of projects
     const dom = data.filter( item => item.type ==="DOM")
     const proj = data.filter(item => item.type ==="PROJ")
     const spa = data.filter(item => item.type === "SPA")
@@ -32,6 +28,7 @@ export default function Dashboard(){
     const [ prevDelete, setPrevDelete] = useState(false)
 
 
+    // open existing project
     function openProject(id){
         setSuccessful(false)
         setAlert('')
@@ -46,6 +43,7 @@ export default function Dashboard(){
     
     }
 
+    //open a new project
     function createProject(e){
         e.preventDefault()
         setUpdateProject(false)
@@ -54,6 +52,7 @@ export default function Dashboard(){
        
     }
 
+    // delete your profile 
     function deleteProfile(e){
         const payload = { username : user}
         const config = { method: 'DELETE', headers:{ "Content-type":"application/json"}, body:JSON.stringify(payload)}
@@ -146,7 +145,7 @@ export default function Dashboard(){
                 </section>
 
             </section>
-       </section>
+        </section>
 
     )
 }

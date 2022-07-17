@@ -32,10 +32,9 @@ export default function CreateProject(){
     
     } = useContext(UserContext)
  
-    const [ inputApi, setInputApi]=useState({})
+
 
     const [message, setMessage]=useState('')
-
     const [errors, setErrors]=useState([])
 
   

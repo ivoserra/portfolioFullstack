@@ -9,11 +9,6 @@ import AnimatedPage from '../Animation/AnimatedPage.jsx'
 
 
 
-
-
-
-
-
 export default function Project(){
 
     const { data } =useContext(DataContext)
@@ -49,59 +44,59 @@ export default function Project(){
 
     return (
         <AnimatedPage>
-       
-        <section className="main_project">
-        <motion.section variants={header} initial="hidden" animate="visible" exit="exit">
-        <section className="header_project">
-            <h1>{project.title}</h1>
-            <p>{project.year}</p>
-        </section>
-        </motion.section>
-        
-        <section className="content">
-       
-        
-           <section className="image-container">
-           <motion.section variants={visual} initial="hidden" animate="visible" exit="exit">
-              { project.video ?  <video  src={project.video} alt={project.name} autoPlay loop/>
-            : <img className="projectLogos" src={project.image} alt={project.name}></img> }
-            </motion.section>  
-            </section>
-          
 
-        
-            <section className="description_container">
-            <motion.section variants={text} initial="hidden" animate="visible" exit="exit">
-                <section className="text">
-                    <h2>description</h2>
-                    <p>{project.description}</p>
-                    <p>Made with: {project.languages}</p>
-                    <p>Responsive: {project.responsive}</p>
-                    <p>Year: {project.year}</p>
-                    <p>Author: {project.author}</p>
-                </section>
-            </motion.section>
-
-            <motion.section variants={link} initial="hidden" animate="visible" exit="exit">
-                <section className="links">
-                    
-                    <section className="linkBlock">
-                        <section className="link">
-                        <a href={project.repository} target="_blank"><BsCodeSquare className="iconLink"/></a>
-                        <p>repository</p>
-                        </section>
-                     {project.deploy ?  <section className="link">
-                        <a href={project.deploy} target="_blank"><FaGithub className="iconLink"/></a>
-                        <p>deployment</p>
-                        </section> : null }
+            <section className="main_project">
+                <motion.section variants={header} initial="hidden" animate="visible" exit="exit">
+                    <section className="header_project">
+                        <h1>{project.title}</h1>
+                        <p>{project.year}</p>
                     </section>
-                </section>
-            </motion.section>
-            </section>
-          
+                </motion.section>
 
-        </section>
-        </section>
+                <section className="content">
+
+
+                    <section className="image-container">
+                        <motion.section variants={visual} initial="hidden" animate="visible" exit="exit">
+                            {project.video ? <video src={project.video} alt={project.name} autoPlay loop />
+                                : <img className="projectLogos" src={project.image} alt={project.name}></img>}
+                        </motion.section>
+                    </section>
+
+
+
+                    <section className="description_container">
+                        <motion.section variants={text} initial="hidden" animate="visible" exit="exit">
+                            <section className="text">
+                                <h2>description</h2>
+                                <p>{project.description}</p>
+                                <p>Made with: {project.languages}</p>
+                                <p>Responsive: {project.responsive}</p>
+                                <p>Year: {project.year}</p>
+                                <p>Author: {project.author}</p>
+                            </section>
+                        </motion.section>
+
+                        <motion.section variants={link} initial="hidden" animate="visible" exit="exit">
+                            <section className="links">
+
+                                <section className="linkBlock">
+                                    <section className="link">
+                                        <a href={project.repository} target="_blank"><BsCodeSquare className="iconLink" /></a>
+                                        <p>repository</p>
+                                    </section>
+                                    {project.deploy && <section className="link">
+                                        <a href={project.deploy} target="_blank"><FaGithub className="iconLink" /></a>
+                                        <p>deployment</p>
+                                    </section> }
+                                </section>
+                            </section>
+                        </motion.section>
+                    </section>
+
+
+                </section>
+            </section>
 
         </AnimatedPage>
 

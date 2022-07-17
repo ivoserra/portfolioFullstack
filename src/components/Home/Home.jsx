@@ -22,22 +22,22 @@ export default function Home(){
     return (
    
         <section className='Hero'>
-        <motion.section variants={title} initial="hidden" animate="visible" exit="exit">
-        <section className='Hero_text'>
-        <p>["hello world!"]</p>
-        </section>
-            
-        </motion.section>
+            <motion.section variants={title} initial="hidden" animate="visible" exit="exit">
+                <section className='Hero_text'>
+                    <p>["hello world!"]</p>
+                </section>
 
-           <motion.section variants={serra} initial="hidden" animate="visible" exit="exit">
-            <section className='Hero_image'>
-                <img src={mount} className="mountain"></img>
-                <img className="cloud" src={cloud}></img>
-                <img className="cloudOne" src={cloud}></img>
-                
-            </section>
+            </motion.section>
+
+            <motion.section variants={serra} initial="hidden" animate="visible" exit="exit">
+                <section className='Hero_image'>
+                    <img src={mount} className="mountain"></img>
+                    <img className="cloud" src={cloud}></img>
+                    <img className="cloudOne" src={cloud}></img>
+
+                </section>
             </motion.section>
         </section>
-        
+
     )
 }

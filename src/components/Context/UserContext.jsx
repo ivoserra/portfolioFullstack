@@ -61,17 +61,12 @@ const contextUser = {
     register, setRegister,
     registerMsg, setRegisterMsg,
     message, setMessage,
-
     alert, setAlert,
     alertUser, setAlertUser,
-    
-
     alertVisitorMsg, setAlertVisitorMsg,
-   
     deleteButton, setDeleteButton,
     alertReg, setAlertReg,
     visitor, setVisitor,
- 
     user, setUser,
     authorization, setAuthorization, 
    

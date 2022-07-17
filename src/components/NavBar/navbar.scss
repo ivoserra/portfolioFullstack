@@ -4,79 +4,78 @@
     margin: 0;
     box-sizing: border-box;
   }
+    @media screen and(min-width:320px) {
+      .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin: 1rem 0.5rem;
   
-  @media screen and(min-width:320px) {
-    .projects {
-      display: flex;
-      flex-direction: column;
-      justify-content: left;
-      margin: 1rem 0.5rem;
+        .project {
+          font-size: 0.8rem;
+          margin: 0.2rem 0.5rem;
   
-      .project {
-        font-size: 0.8rem;
-        margin: 0.2rem 0.5rem;
+          li {
+            list-style-type: none;
+            margin-top: 0.7rem;
+            margin-bottom: 0.5rem;
   
-        li {
-          list-style-type: none;
-          margin-top: 0.7rem;
-          margin-bottom: 0.5rem;
+            h1 {
+              font-size: 1.2rem;
+            }
   
-          h1 {
-            font-size: 1.2rem;
+            h2 {
+              font-size: 1rem;
+              color: rgb(54, 54, 54);
+            }
           }
   
-          h2 {
+          .title {
+            text-decoration: none;
+            color: black;
+            position: relative;
             font-size: 1rem;
-            color: rgb(54, 54, 54);
-          }
-        }
+            cursor: pointer;
   
-        .title {
-          text-decoration: none;
-          color: black;
-          position: relative;
-          font-size: 1rem;
-          cursor: pointer;
-  
-          &:hover {
+            &:hover {
               color: gray;
-          }
+            }
   
-          &:focus {
+            &:focus {
               color: gray;
+            }
           }
-        }
   
-        .title:after {
-          content: "";
-          position: absolute;
-          display: inline;
-          top: 1.4rem;
-          width: 100%;
-          transform: scaleX(0);
-          height: 1px;
-          bottom: 0;
-          left: 0;
-          background-color: rgb(44, 44, 44);
-          transform-origin: bottom right;
-          transition: transform 0.25s ease-out;
-        }
+          .title:after {
+            content: "";
+            position: absolute;
+            display: inline;
+            top: 1.4rem;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(44, 44, 44);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+          }
   
-        .title:hover:after {
-          transform: scaleX(1);
-          transform-origin: bottom left;
+          .title:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
         }
       }
     }
-  }
   
-  @media screen and(min-width:768px) {
-    .projects {
-      margin: 2rem 2rem;
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
+    @media screen and(min-width:768px) {
+      .projects {
+        margin: 2rem 2rem;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
     }
-  }

@@ -102,20 +102,20 @@ export default function ImageUpload({projID, mongoImage}){
 
     return(
         <section className="Video">
-        <div className="file">
-        <div className="image-container">
-         {image || mongoImage ? <img src={image || mongoImage} width="620" height="240"></img> : null }
-        </div>
-        <section className="input-video">
-            <input ref={img}  type="file" accept="image/*" className="input"/>
-            {image || mongoImage ? null : <button className="button" type="submit" onClick={formHandler}>Upload</button> }
-            {image || mongoImage ? <button className="button" onClick={deleteImage}>delete</button> : null }
-        </section>
-        <hr/>
+            <div className="file">
+                <div className="image-container">
+                    {image || mongoImage ? <img src={image || mongoImage} width="620" height="240"></img> : null}
+                </div>
+                <section className="input-video">
+                    <input ref={img} type="file" accept="image/*" className="input" />
+                    {image || mongoImage ? null : <button className="button" type="submit" onClick={formHandler}>Upload</button>}
+                    {image || mongoImage ? <button className="button" onClick={deleteImage}>delete</button> : null}
+                </section>
+                <hr />
 
-        <h3>Uploaded {progress} % </h3>
-        </div>
-     
+                <h3>Uploaded {progress} % </h3>
+            </div>
+
         </section>
     )
 }

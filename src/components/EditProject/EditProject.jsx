@@ -41,6 +41,7 @@ export default function EditProject(){
    const [ errors, setErrors]=useState([])
 
 
+   // submit your edited project
     function submitProject(e){
         e.preventDefault()
         setErrors([])
@@ -51,9 +52,10 @@ export default function EditProject(){
             return
         }
 
-    
 
         const url = `https://ivoserrawebdev.herokuapp.com/project/${project._id}`
+
+        // payload with ternary conditions so it does not overwrite old data with the empty inputs.
         const payload ={
             type: type ? type : project.type,
             name: title ? title.replace(/\s/g, '').toLowerCase() : project.name,
@@ -269,8 +271,9 @@ export default function EditProject(){
                             <p>{project.author}</p>
                             <input placeholder="update Name" type="text" onChange={e => setAuthor(e.target.value)}/>
                             {errors && errors.map((item, i) => <p key={i} className='alert'>{item.author}</p>)}
+                            {authorization && <p className="alert">{alertVisitorMsg}</p>}
                         </section>
-                        {authorization && <p className="alert">{alertVisitorMsg}</p>}
+                        
 
                         <section className="button-box">
                             <button className="button" onClick={submitProject}>Submit</button>

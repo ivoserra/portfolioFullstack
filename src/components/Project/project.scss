@@ -5,227 +5,225 @@
  
 }
 
+@media screen and(min-width:320px) {
 
-@media screen and(min-width:320px){
-    
 
-.main_project{
-    margin:1rem 1rem;
-  
+    .main_project {
+        margin: 1rem 1rem;
 
-    .header_project{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin:1rem 0rem;
-        
-        h1{
-            font-size: 1.2rem;
+
+        .header_project {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 1rem 0rem;
+
+            h1 {
+                font-size: 1.2rem;
+            }
         }
-    }
 
-    .content{
-      
-      .description_container{
-          width:100%;
-          padding: 0rem;
-          margin:2rem 0rem;
+        .content {
 
-          h2{
-              font-size: 1rem;
-          }
-          p{
-              font-size: 0.8rem;
-              margin:1rem 0rem;
-          }
-          .links{
-              display:flex;
-              flex-direction: column;
-              justify-content: left;
-              margin-top:2.5rem;
-    
+            .description_container {
+                width: 100%;
+                padding: 0rem;
+                margin: 2rem 0rem;
 
-              .linkBlock{
-                  margin:1rem 0rem;
-                  display:flex;
-                  justify-content: left;
+                h2 {
+                    font-size: 1rem;
+                }
 
-                  .link{
-                    display:flex;
+                p {
+                    font-size: 0.8rem;
+                    margin: 1rem 0rem;
+                }
+
+                .links {
+                    display: flex;
                     flex-direction: column;
-                    align-items: center;
-    
-                        p{
-                            font-size: 0.7rem;
-                        }
-    
-                        .iconLink{
-                        text-decoration: none;
-                        font-size: 2rem;
-                        margin:0rem 2rem;
-                        color:hotpink;
-                        cursor:pointer;
-                        display:flex;
-        
-                        }
-                    
-                }
-              }
-
-          }
-     
-         
-      }
-  
-      .image-container{
-          width:100%;
-          
-          
-          video{
-             
-              width:100%;      
-          }
-
-          img{
-              width:100%;
-          }
-      }
-
-    }
-  }
-
-}
-
-@media screen and(min-width: 768px){
+                    justify-content: left;
+                    margin-top: 2.5rem;
 
 
+                    .linkBlock {
+                        margin: 1rem 0rem;
+                        display: flex;
+                        justify-content: left;
 
-    .main_project{
-        margin:1vh 5vw;
-        padding:1rem;
+                        .link {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
 
-        .content{
-            margin:1rem 0rem;
-        
+                            p {
+                                font-size: 0.7rem;
+                            }
 
-                .description_container{
-                
-                    margin: 4rem 0rem;
-                    padding:0rem;
-                    width:100%;
+                            .iconLink {
+                                text-decoration: none;
+                                font-size: 2rem;
+                                margin: 0rem 2rem;
+                                color: hotpink;
+                                cursor: pointer;
+                                display: flex;
 
-                    .text{
-                        
-                        h2{
-                            font-size: 1rem;
+                            }
+
                         }
                     }
-                    .links{
 
-                        h2{
-                            font-size: 1rem;
-                        }
-
-                        margin:0rem;
-                    }
                 }
 
-               .image-container{
-                 img{
-                     width:500px;
-                 }
-               }
 
-        }
-    }
+            }
+
+            .image-container {
+                width: 100%;
 
 
-}
+                video {
 
-@media screen and(min-width: 1024px){
+                    width: 100%;
+                }
 
-
-    .main_project{
-        margin:1vh 8.5vw;
-
-        .description_container{
-            .text{
-                width:98%;
-                p{
-                    font-size:1rem;
+                img {
+                    width: 100%;
                 }
             }
-    }
 
-
-    }
-    
-}
-
-@media screen and(min-width: 1440px){
-
-
-    .main_project{
-        margin:0.5vh 12vw;
-        height:54vh;
-        
-
-      .content{
-         
-          margin:3rem 0rem;
-          display:flex;
-          align-content: center;
-          flex-direction: row-reverse;
-          justify-content:space-between;
-          height:30vh;
-          
-
-          .description_container{
-              position:relative;
-              top:-95px;
-              align-self:baseline;
-              width:50%;
-              display:flex;
-              flex-direction: column;
-              justify-content: space-between;
-              
-              .text{
-                  width:88%;
-                  p{
-                      font-size: 1rem;
-
-                  }
-              }
-
-              .links{
-                  display:flex;
-                  
-              }
-              
-
-              .text p:nth-child(2){
-                  width:85%;
-              }
-          }
-
-          .image-container{
-            position:relative;
-            top:-34px;
-            width:65%;
-            height:30vh;
-       
-          }
-
-
-      }
-
-
+        }
     }
 
 }
 
+@media screen and(min-width: 768px) {
 
 
 
+    .main_project {
+        margin: 1vh 5vw;
+        padding: 1rem;
+
+        .content {
+            margin: 1rem 0rem;
 
 
+            .description_container {
+
+                margin: 4rem 0rem;
+                padding: 0rem;
+                width: 100%;
+
+                .text {
+
+                    h2 {
+                        font-size: 1rem;
+                    }
+                }
+
+                .links {
+
+                    h2 {
+                        font-size: 1rem;
+                    }
+
+                    margin:0rem;
+                }
+            }
+
+            .image-container {
+                img {
+                    width: 500px;
+                }
+            }
+
+        }
+    }
+
+
+}
+
+@media screen and(min-width: 1024px) {
+
+
+    .main_project {
+        margin: 1vh 8.5vw;
+
+        .description_container {
+            .text {
+                width: 98%;
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+@media screen and(min-width: 1440px) {
+
+
+    .main_project {
+        margin: 0.5vh 12vw;
+        height: 54vh;
+
+
+        .content {
+
+            margin: 3rem 0rem;
+            display: flex;
+            align-content: center;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            height: 30vh;
+
+
+            .description_container {
+                position: relative;
+                top: -95px;
+                align-self: baseline;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .text {
+                    width: 88%;
+
+                    p {
+                        font-size: 1rem;
+
+                    }
+                }
+
+                .links {
+                    display: flex;
+
+                }
+
+
+                .text p:nth-child(2) {
+                    width: 85%;
+                }
+            }
+
+            .image-container {
+                position: relative;
+                top: -34px;
+                width: 65%;
+                height: 30vh;
+
+            }
+
+
+        }
+
+
+    }
+
+}

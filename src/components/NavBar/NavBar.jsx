@@ -20,36 +20,36 @@ const back = data.filter(item=>item.type === "BACK")
 
       
     return (
-   
-  
+
+
         <section className="works">
-        <AnimatedPage>
-        <div className="projects">
+            <AnimatedPage>
+                <div className="projects">
 
-        <section className="project">
-         <li><h2>Personal Projects</h2></li>
-        { proj.map(item => <li key={item._id}><NavLink className="title" key={item.name} to={item.name}>{item.title}</NavLink></li>)}
-        </section>
-       
-        <section className="project">
-         <li><h2>DOM and API</h2></li>
-        { dom.map(item => <li key={item._id}><NavLink className="title" key={item.name} to={item.name}>{item.title}</NavLink></li>)}
-        </section>
+                    <section className="project">
+                        <li><h2>Personal Projects</h2></li>
+                        {proj.map(item => <li key={item._id}><NavLink className="title" key={item.name} to={item.name}>{item.title}</NavLink></li>)}
+                    </section>
 
-        <section className="project">
-         <li><h2>REACT and API</h2></li>
-        { spa.map(item => <li key={item._id}><NavLink className="title" key={item.name} to={item.name}>{item.title}</NavLink></li>)}
-        </section>
+                    <section className="project">
+                        <li><h2>DOM and API</h2></li>
+                        {dom.map(item => <li key={item._id}><NavLink className="title" key={item.name} to={item.name}>{item.title}</NavLink></li>)}
+                    </section>
 
-        <section className="project">
-        <li><h2>Express / MongoDB</h2></li>
-        { back.map(item => <li key={item._id}><NavLink className="title" key={item.name} to={item.name}>{item.title}</NavLink></li>)}
-        </section>
+                    <section className="project">
+                        <li><h2>REACT and API</h2></li>
+                        {spa.map(item => <li key={item._id}><NavLink className="title" key={item.name} to={item.name}>{item.title}</NavLink></li>)}
+                    </section>
 
-        </div>
-        </AnimatedPage>
-       
-        <Outlet/>
+                    <section className="project">
+                        <li><h2>Express / MongoDB</h2></li>
+                        {back.map(item => <li key={item._id}><NavLink className="title" key={item.name} to={item.name}>{item.title}</NavLink></li>)}
+                    </section>
+
+                </div>
+            </AnimatedPage>
+
+            <Outlet />
 
         </section>
 

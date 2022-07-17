@@ -39,27 +39,27 @@ export default function LoginPage(){
     return(
         <section className="Login">
             <section className="">
-            { login ? (
-                <section className="log-main">
-                <section className="log-header">   
-                    {message ? <section><h1>{message}</h1></section>:<></>}
-                    <button className="button" onClick={handleLogout}>logout</button>
-                </section>
-                <Dashboard/>
-                </section>           
-            )
-            :
-            ( 
-                <section className="inner-form">
-                <Login/>               
-                { register ? <section className="register-form"><h3>{registerMsg}</h3></section> 
-                : <Register/>
+                {login ? (
+                    <section className="log-main">
+                        <section className="log-header">
+                            {message ? <section><h1>{message}</h1></section> : <></>}
+                            <button className="button" onClick={handleLogout}>logout</button>
+                        </section>
+                        <Dashboard />
+                    </section>
+                )
+                    :
+                    (
+                        <section className="inner-form">
+                            <Login />
+                            {register ? <section className="register-form"><h3>{registerMsg}</h3></section>
+                                : <Register />
+                            }
+                        </section>
+                    )
                 }
-                </section>
-            )
-            }
             </section>
         </section>
-    
+
     )
 }

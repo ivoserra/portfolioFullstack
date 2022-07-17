@@ -1,407 +1,415 @@
 
+@media screen and(min-width:320px) {
 
-@media screen and(min-width:320px){
+    .mainAbout {
 
-    .mainAbout{
+        width: 100%;
+        padding: 1rem;
 
-       width:100%;
-        padding:1rem;
-    
-        .inner_about{
-            display:flex;
+        .inner_about {
+            display: flex;
             flex-direction: column;
             justify-content: space-between;
-    
-            .aboutImage{
-                display:flex;
+
+            .aboutImage {
+                display: flex;
                 justify-content: center;
-                padding:0.5rem;
-                width:100%;
+                padding: 0.5rem;
+                width: 100%;
 
-            .photoContainer{
-                width:100%;
-                height:65vh;
-                display:flex;
-                justify-content: space-evenly;
-                
-    
-                .boxOne{
-                    width:20%;
-                    position:relative;
+                .photoContainer {
+                    width: 100%;
+                    height: 65vh;
+                    display: flex;
+                    justify-content: space-evenly;
 
-                    .imgOne{
-                        position:absolute;
-                        top:2vh;
-                        width:165px;
-                        z-index:1;
+
+                    .boxOne {
+                        width: 20%;
+                        position: relative;
+
+                        .imgOne {
+                            position: absolute;
+                            top: 2vh;
+                            width: 165px;
+                            z-index: 1;
+                        }
+
+                        .drawOne {
+                            position: absolute;
+                            top: 25vh;
+                            width: 165px;
+                            z-index: 1;
+
+                        }
+
+
                     }
-                    .drawOne{
-                        position:absolute;
-                        top:25vh;
-                        width:165px;
-                        z-index:1;
-                    
+
+                    .boxTwo {
+                        position: relative;
+                        width: 20%;
+
+
+                        .imgTwo {
+                            position: absolute;
+                            width: 160px;
+                            bottom: 6.2vh;
+                            right: 1px;
+                            z-index: -1
+                        }
+
+
+                        .drawTwo {
+                            position: absolute;
+                            width: 150px;
+                            top: 10vh;
+                            right: 1px;
+                            z-index: -1
+                        }
+
                     }
 
 
-                }
 
-                .boxTwo{
-                    position:relative;
-                    width:20%;
-                    
-
-                .imgTwo{
-                    position:absolute;
-                    width:160px;
-                    bottom:6.2vh;
-                    right:1px;
-                    z-index:-1
-                }
-
-               
-                .drawTwo{
-                    position:absolute;
-                    width:150px;
-                    top:10vh;
-                    right:1px;
-                    z-index:-1
-                }
 
                 }
-    
-            
-           
-    
             }
-        }
-    
-            .aboutText{
-              
-                .aboutTextContent{
-    
-                    h2{
-                        font-size: 0.9rem;
-                        margin-top:0.5rem;
-                    }
-    
-                    p{
+
+            .aboutText {
+
+                .aboutTextContent {
+
+                    h2 {
                         font-size: 0.9rem;
                         margin-top: 0.5rem;
-                        margin-bottom:0.7rem;
                     }
-                    
+
+                    p {
+                        font-size: 0.9rem;
+                        margin-top: 0.5rem;
+                        margin-bottom: 0.7rem;
+                    }
+
                 }
 
-                .about_skills{
-                    width:100%;
-                    
+                .about_skills {
+                    width: 100%;
 
-                    .about_icon{
+
+                    .about_icon {
                         margin-top: 1rem;
-                        display:flex;
+                        display: flex;
                         flex-wrap: wrap;
                         justify-content: left;
-                       
 
-                        .icon_box{
-                            display:flex;
+
+                        .icon_box {
+                            display: flex;
                             flex-direction: column;
                             align-items: center;
                             padding: 0.3rem;
-                            margin:0rem 0.2rem;
+                            margin: 0rem 0.2rem;
 
-                            .icon{
-                               
+                            .icon {
+
                                 font-size: 2rem;
 
                             }
 
-                            p{
+                            p {
                                 font-size: 0.6rem;
                             }
                         }
-                                    
+
 
                     }
-                   
+
                 }
 
-                .about_contact{
-                    h2{
+                .about_contact {
+                    h2 {
                         margin-bottom: 0.5rem;
-                    };
+                    }
 
-                    .contact{
+                    ;
+
+                    .contact {
                         list-style-type: none;
-                        color:rgb(68, 68, 68);
-                        position:relative;
-                        margin-top:0.7rem;
-                        margin-bottom:0.5rem;
+                        color: rgb(68, 68, 68);
+                        position: relative;
+                        margin-top: 0.7rem;
+                        margin-bottom: 0.5rem;
                         font-size: 1rem;
                         font-weight: 500;
-                        cursor:pointer;
+                        cursor: pointer;
                         text-decoration: none;
                     }
-                    .contact:after{
-                        content:'';
-                        position:absolute;
-                        top:1.6rem;
-                        width:160px;
-                        transform:scaleX(0);
-                        height:1px;
-                        bottom:0;
-                        left:0;
+
+                    .contact:after {
+                        content: '';
+                        position: absolute;
+                        top: 1.6rem;
+                        width: 160px;
+                        transform: scaleX(0);
+                        height: 1px;
+                        bottom: 0;
+                        left: 0;
                         background-color: rgb(44, 44, 44);
-                        transform-origin:bottom right;
+                        transform-origin: bottom right;
                         transition: transform 0.25s ease-out;
                     }
-                    .contact:hover:after{
-                        transform:scaleX(1);
+
+                    .contact:hover:after {
+                        transform: scaleX(1);
                         transform-origin: bottom left;
-                        
+
                     }
 
                 }
 
-                .about_links{
-                    display:flex;
+                .about_links {
+                    display: flex;
                     align-items: baseline;
                     justify-content: space-between;
-                    margin-top:1.5rem;
-                    
+                    margin-top: 1.5rem;
 
-                   .about_link{
-                       display: flex;
-                       flex-direction: column;
-                       align-items: center;
-                       justify-content: center;
-                       margin-left:0.5rem;
-                       margin-right: 1.5rem;
-                       text-align: center;
-                       
-                       a{
-                           text-decoration: none;
-                           font-size: 2rem;
-                           margin:0.5rem 0rem;
-                           color:hotpink;
-                           cursor:pointer;
 
-                       }
+                    .about_link {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin-left: 0.5rem;
+                        margin-right: 1.5rem;
+                        text-align: center;
 
-                       p{
-                           font-size: 0.7rem;
-                       }
-                   }
+                        a {
+                            text-decoration: none;
+                            font-size: 2rem;
+                            margin: 0.5rem 0rem;
+                            color: hotpink;
+                            cursor: pointer;
+
+                        }
+
+                        p {
+                            font-size: 0.7rem;
+                        }
+                    }
 
 
                 }
 
-                
+
             }
 
 
         }
     }
-    
+
 }
 
 
-@media screen and(min-width:768px){
+@media screen and(min-width:768px) {
 
-        .mainAbout{
-            padding:1rem;
+    .mainAbout {
+        padding: 1rem;
 
-            .inner_about{
-                display:flex;
-                justify-content: space-between;
+        .inner_about {
+            display: flex;
+            justify-content: space-between;
 
-                .aboutImage{
-                    margin:1rem 0rem;
-                    height:65vh;
-                  
-                    .photoContainer{
-                        margin:2rem 0rem;
-                        position:none;
-                        width:75%;
-                        display:flex;
-                        justify-content: space-around;
+            .aboutImage {
+                margin: 1rem 0rem;
+                height: 65vh;
 
-
-                        .boxOne{
-                            position:relative;
-                           
-                            width:50%;
-                            .imgOne{
-                                position:absolute;
-                                top:2vh;
-                                right:-50px;
-                                width:22vw;
-                                z-index:1;
-                            }
-                            .drawOne{
-                                display:block;
-                                position:absolute;
-                                width:22vw;
-                                top:15vh;
-                                right:100px;
-                                z-index:-1
-                            }
-                        }
-
-                        .boxTwo{
-                            
-                            position:relative;
-                            width:50%;
-
-                            .imgTwo{
-                                position:absolute;
-                                width:22vw;
-                                top:20vh;
-                                left:0px;
-                                z-index:1
-                            }
-
-                            .drawTwo{
-                                display:block;
-                                position:absolute;
-                                width:22vw;
-                                top:0;
-                                left:100px;
-                                z-index:-1
-                            }
-                        }
-
-                   
-            
-                        .imgThree{
-                            display:none;
-                        }
-            
-            
-                    
-                    }
-            
-
-                }
-            
-
-                .aboutText{
-                    margin:1rem 5rem;
-
-                    .aboutTextContent{
-
-                        h2{
-                            font-size: 0.9rem;
-                            margin-top:0.5rem;
-                        }
-
-                        p{
-                            font-size: 0.9rem;
-                            margin-top: 0.5rem;
-                            margin-bottom:0.7rem;
-                        }
-                        
-                    }
-                }
-            }
-        }
-}
-
-
-@media screen and(min-width:1024px){
-
-    .mainAbout{
-
-        padding:1rem;
-
-        .inner_about{
-            display:flex;
-            height:100%;
-
-            .aboutImage{
-                position:relative;
-                margin:1.5rem 0rem;
-              
-               
-                .photoContainer{
-                        
-                    position:none;
-                    width:100%;
-                    display:flex;
+                .photoContainer {
+                    margin: 2rem 0rem;
+                    position: none;
+                    width: 75%;
+                    display: flex;
                     justify-content: space-around;
 
 
-                    .boxOne{
-                        position:relative;
-                     
-                        width:50%;
-                        .imgOne{
-                            position:absolute;
-                            top:2vh;
-                            right:-50px;
-                            width:17vw;
-                            z-index:1;
+                    .boxOne {
+                        position: relative;
+
+                        width: 50%;
+
+                        .imgOne {
+                            position: absolute;
+                            top: 2vh;
+                            right: -50px;
+                            width: 22vw;
+                            z-index: 1;
                         }
-                        .drawOne{
-                            display:block;
-                            position:absolute;
-                            width:18vw;
-                            top:15vh;
-                            right:100px;
-                            z-index:-1
+
+                        .drawOne {
+                            display: block;
+                            position: absolute;
+                            width: 22vw;
+                            top: 15vh;
+                            right: 100px;
+                            z-index: -1
                         }
                     }
 
-                    .boxTwo{
-                        position:relative;
-                        width:50%;
-                       
+                    .boxTwo {
 
-                        .imgTwo{
-                            position:absolute;
-                            width:17vw;
-                            top:20vh;
-                            left:0px;
-                            z-index:1
+                        position: relative;
+                        width: 50%;
+
+                        .imgTwo {
+                            position: absolute;
+                            width: 22vw;
+                            top: 20vh;
+                            left: 0px;
+                            z-index: 1
                         }
 
-                        .drawTwo{
-                            display:block;
-                            position:absolute;
-                            width:17vw;
-                            top:0;
-                            left:100px;
-                            z-index:-1
+                        .drawTwo {
+                            display: block;
+                            position: absolute;
+                            width: 22vw;
+                            top: 0;
+                            left: 100px;
+                            z-index: -1
                         }
                     }
+
+
+
+                    .imgThree {
+                        display: none;
+                    }
+
+
+
                 }
-            
-              
-        
+
 
             }
 
-            .aboutText{
-                margin:5rem 8rem;
-                height:100%;
 
-                .aboutTextContent{
+            .aboutText {
+                margin: 1rem 5rem;
 
-                    h2{
-                        font-size: 1rem;
-                        margin-top:0.5rem;
-                    }
+                .aboutTextContent {
 
-                    p{
+                    h2 {
                         font-size: 0.9rem;
                         margin-top: 0.5rem;
-                        margin-bottom:0.7rem;
                     }
-                    
+
+                    p {
+                        font-size: 0.9rem;
+                        margin-top: 0.5rem;
+                        margin-bottom: 0.7rem;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and(min-width:1024px) {
+
+    .mainAbout {
+
+        padding: 1rem;
+
+        .inner_about {
+            display: flex;
+            height: 100%;
+
+            .aboutImage {
+                position: relative;
+                margin: 1.5rem 0rem;
+
+
+                .photoContainer {
+
+                    position: none;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+
+
+                    .boxOne {
+                        position: relative;
+
+                        width: 50%;
+
+                        .imgOne {
+                            position: absolute;
+                            top: 2vh;
+                            right: -50px;
+                            width: 17vw;
+                            z-index: 1;
+                        }
+
+                        .drawOne {
+                            display: block;
+                            position: absolute;
+                            width: 18vw;
+                            top: 15vh;
+                            right: 100px;
+                            z-index: -1
+                        }
+                    }
+
+                    .boxTwo {
+                        position: relative;
+                        width: 50%;
+
+
+                        .imgTwo {
+                            position: absolute;
+                            width: 17vw;
+                            top: 20vh;
+                            left: 0px;
+                            z-index: 1
+                        }
+
+                        .drawTwo {
+                            display: block;
+                            position: absolute;
+                            width: 17vw;
+                            top: 0;
+                            left: 100px;
+                            z-index: -1
+                        }
+                    }
                 }
 
-                .about_links{
+
+
+
+            }
+
+            .aboutText {
+                margin: 5rem 8rem;
+                height: 100%;
+
+                .aboutTextContent {
+
+                    h2 {
+                        font-size: 1rem;
+                        margin-top: 0.5rem;
+                    }
+
+                    p {
+                        font-size: 0.9rem;
+                        margin-top: 0.5rem;
+                        margin-bottom: 0.7rem;
+                    }
+
+                }
+
+                .about_links {
                     margin-top: 2rem;
                 }
             }
@@ -410,105 +418,107 @@
 }
 
 
-@media screen and(min-width:1440px){
+@media screen and(min-width:1440px) {
 
-    .mainAbout{
-        margin:1rem 2rem;
-        padding:0rem;
+    .mainAbout {
+        margin: 1rem 2rem;
+        padding: 0rem;
 
-        .inner_about{
-           
-            margin:0rem 0rem;
-            padding:0rem;
-            display:flex;
+        .inner_about {
+
+            margin: 0rem 0rem;
+            padding: 0rem;
+            display: flex;
             flex-direction: row;
             justify-content: center;
 
-            .aboutImage{
-                position:relative;
-                width:33%;
-              
-               
-                .photoContainer{
-                    position:none;
-                    width:100%;
-                    display:flex;
+            .aboutImage {
+                position: relative;
+                width: 33%;
+
+
+                .photoContainer {
+                    position: none;
+                    width: 100%;
+                    display: flex;
                     justify-content: center;
 
 
-                    .boxOne{
-                        position:relative;
-                        width:25%;
-                        .imgOne{
-                            position:absolute;
-                            top:2vh;
-                            right:-60px;
-                            width:10vw;
-                            z-index:1;
+                    .boxOne {
+                        position: relative;
+                        width: 25%;
+
+                        .imgOne {
+                            position: absolute;
+                            top: 2vh;
+                            right: -60px;
+                            width: 10vw;
+                            z-index: 1;
                         }
-                        .drawOne{
-                            display:block;
-                            position:absolute;
-                            width:10vw;
-                            top:20vh;
-                            right:70px;
-                            z-index:-1
+
+                        .drawOne {
+                            display: block;
+                            position: absolute;
+                            width: 10vw;
+                            top: 20vh;
+                            right: 70px;
+                            z-index: -1
                         }
                     }
 
-                    .boxTwo{
-                        position:relative;
-                        width:25%;
+                    .boxTwo {
+                        position: relative;
+                        width: 25%;
 
-                        .imgTwo{
-                            position:absolute;
-                            width:10vw;
-                            top:20vh;
-                            left:0px;
-                            z-index:1
+                        .imgTwo {
+                            position: absolute;
+                            width: 10vw;
+                            top: 20vh;
+                            left: 0px;
+                            z-index: 1
                         }
 
-                        .drawTwo{
-                            display:block;
-                            position:absolute;
-                            width:10vw;
-                            top:0;
-                            left:100px;
-                            z-index:-1
+                        .drawTwo {
+                            display: block;
+                            position: absolute;
+                            width: 10vw;
+                            top: 0;
+                            left: 100px;
+                            z-index: -1
                         }
                     }
                 }
-            
-              
-        
+
+
+
 
             }
 
-            .aboutText{
-     
-                width:35%;
-                margin:1rem 5rem;
-                height:100%;
+            .aboutText {
 
-                .aboutTextContent{
-                    
-                    h2{
+                width: 35%;
+                margin: 1rem 5rem;
+                height: 100%;
+
+                .aboutTextContent {
+
+                    h2 {
                         font-size: 1rem;
-                        margin-top:0.5rem;
+                        margin-top: 0.5rem;
                     }
 
-                    p{
+                    p {
                         font-size: 0.9rem;
                         margin-top: 0.5rem;
-                        margin-bottom:0.7rem;
+                        margin-bottom: 0.7rem;
                     }
-                    
+
                 }
 
-              
+
             }
         }
     }
 
-  
+
 }

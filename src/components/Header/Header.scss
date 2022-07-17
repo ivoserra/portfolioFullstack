@@ -7,156 +7,155 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
+@media screen and (min-width: 320px) {
 
-@media screen and (min-width: 320px){
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
 
- .header{
-     display:flex;
-     flex-direction: column;
-     align-content: center;
-     width:100%;
-
-     .brand{
-         width:100%;
-         padding:1rem;
-    
-   
-        h1{
-            font-size: 5.5rem;
-        }
-   
-        p{
-            font-size: 2.5rem;
-    
-        }
-    
-     }
-
-     
-
-     .nav-sub-header{
-         width:100%;
-         display:flex;
-         justify-content: space-evenly;
-
-         .title {
-            text-decoration: none;
-            color: black;
-            position: relative;
-            font-size: 1rem;
-            cursor: pointer;
-    
-            &:hover {
-                color: gray;
-            }
-    
-            &:focus {
-                color: gray;
-            }
-          }
-    
-          .title:after {
-            content: "";
-            position: absolute;
-            display: inline;
-            top: 1.4rem;
+        .brand {
             width: 100%;
-            transform: scaleX(0);
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: rgb(44, 44, 44);
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-          }
-    
-          .title:hover:after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-          }
-    
+            padding: 1rem;
+
+
+            h1 {
+                font-size: 5.5rem;
+            }
+
+            p {
+                font-size: 2.5rem;
+
+            }
+
         }
 
-        .subLinkFour{
-            display:none;
+
+
+        .nav-sub-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+
+            .title {
+                text-decoration: none;
+                color: black;
+                position: relative;
+                font-size: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    color: gray;
+                }
+
+                &:focus {
+                    color: gray;
+                }
+            }
+
+            .title:after {
+                content: "";
+                position: absolute;
+                display: inline;
+                top: 1.4rem;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: rgb(44, 44, 44);
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+            }
+
+            .title:hover:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+
         }
 
-            
-     }
- }
+        .subLinkFour {
+            display: none;
+        }
+
+
+    }
+}
 
 
 
 
 @media screen and(min-width:768px) {
 
-   .header{
-       width:100%;
-       justify-content: center;
-       align-items: center;
-   }
- 
-    .brand{      
-        display:flex;
+    .header {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brand {
+        display: flex;
         flex-direction: row;
-        align-items:baseline;
+        align-items: baseline;
         justify-content: space-evenly;
-        margin:2rem 2rem;
-        
+        margin: 2rem 2rem;
+
 
     }
 
-    .sub-header{
-        width:100%;
+    .sub-header {
+        width: 100%;
 
-        .nav-sub-header{
-            display:flex;
+        .nav-sub-header {
+            display: flex;
             justify-content: space-evenly;
         }
 
 
     }
 
-    
+
 }
 
-@media screen and(min-width: 1023px){
+@media screen and(min-width: 1023px) {
 
-    .header{
-        display:flex;
+    .header {
+        display: flex;
 
-        .brand{
+        .brand {
             justify-content: space-between;
-            width:82%;
-            margin:2rem 6rem;
-    
-            
+            width: 82%;
+            margin: 2rem 6rem;
+
+
         }
 
-        .subLinkFour{
-            display:block;
+        .subLinkFour {
+            display: block;
         }
 
-       
+
 
     }
-    
-}
-@media screen and(min-width: 1440px){
 
-    .header{
-        display:flex;
+}
+
+@media screen and(min-width: 1440px) {
+
+    .header {
+        display: flex;
         justify-content: center;
 
-        .brand{
+        .brand {
             justify-content: space-between;
-            width:73%;
-            margin:2rem 6rem;
-            
+            width: 73%;
+            margin: 2rem 6rem;
+
         }
 
 
     }
-    
-}
 
+}

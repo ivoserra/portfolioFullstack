@@ -53,19 +53,19 @@ export const Login = () => {
 
 
   return (
-    
-            <form className="login-form" onSubmit={logUser}>
-                <h1>login</h1>
-                <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="name"></input>
-                {errors  && errors.map((item,i) => <p key={i} className="alert">{item.username}</p>) }
-                <input type="password"  value={password} onChange={e=>setPassword(e.target.value)} placeholder="password"></input>
 
-               
-               { errors && errors.map((item,i) => <p key={i} className="alert">{item.password}</p>) }
-               { alert &&  <section className="alert"><p className="alert">{alert}</p></section> }
-         
-                <button className="button">submit</button>      
-            </form>
+      <form className="login-form" onSubmit={logUser}>
+          <h1>login</h1>
+          <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="name"></input>
+          {errors && errors.map((item, i) => <p key={i} className="alert">{item.username}</p>)}
+          <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="password"></input>
+
+
+          {errors && errors.map((item, i) => <p key={i} className="alert">{item.password}</p>)}
+          {alert && <section className="alert"><p className="alert">{alert}</p></section>}
+
+          <button className="button">submit</button>
+      </form>
                           
   )
 }

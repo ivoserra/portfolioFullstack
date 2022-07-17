@@ -99,24 +99,24 @@ export default function VideoUpload({projID, mongoVideo}){
 
     return(
         <section className="Video">
-        <div className="file">
-        <div>
-         {video || mongoVideo ? <video width="420" controls>
-              <source src={video || mongoVideo} type="video/mp4"></source>
-              <source src={video || mongoVideo} type="video/webm"></source>
-          </video> : <></> }
-        </div>
+            <div className="file">
+                <div>
+                    {video || mongoVideo ? <video width="420" controls>
+                        <source src={video || mongoVideo} type="video/mp4"></source>
+                        <source src={video || mongoVideo} type="video/webm"></source>
+                    </video> : <></>}
+                </div>
 
-        <section className="input-video">
-            <input ref={img} type="file" accept="video/*" className="input"/>
-            { video || mongoVideo ? null : <button className="button" type="submit" onClick={formHandler}>Upload</button> }
-            { video || mongoVideo ? <button className="button" onClick={deleteVideo}>delete</button>: null }
-        </section>
-        <hr/>
+                <section className="input-video">
+                    <input ref={img} type="file" accept="video/*" className="input" />
+                    {video || mongoVideo ? null : <button className="button" type="submit" onClick={formHandler}>Upload</button>}
+                    {video || mongoVideo ? <button className="button" onClick={deleteVideo}>delete</button> : null}
+                </section>
+                <hr />
 
-        <h3>Uploaded {progress} % </h3>
-        </div>
-  
+                <h3>Uploaded {progress} % </h3>
+            </div>
+
         </section>
     )
 }
