@@ -47,9 +47,6 @@ export const Register = () => {
 
     }
 
-
-
-
     return (
 
         <section className="register-form">
@@ -68,8 +65,6 @@ export const Register = () => {
                 <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="password"></input>
                 {errors && errors.map((item, i) => <p key={i} className="alert">{item.password}</p>)}
                 {registerMsg && <p className="alert">{registerMsg}</p>}
-
-                {/* { alertReg ? <p className="alert">{alertReg}</p>: null } */}
 
                 <button className="button">submit</button>
             </form>

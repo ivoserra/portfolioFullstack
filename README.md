@@ -1,12 +1,13 @@
-# * MERN STACK portfolio
-### Portfolio with its own database.
-## full stack project
+# * MERN STACK portfolio *
+
+## Fullstack portfolio with its own database.
 
 <img src="../../portofolio/src/images/portfolioImage.png">
 
 <br>
 
 ## Welcome to my portfolio. 
+
 I designed this portfolio from the ground. Its an original idea, with my aesthetics and mood in relation to design in 2022. 
 In my portfolio there is an about page, there you can know more about me, as a person and my journey to become a web-developer.
 
@@ -20,10 +21,11 @@ Its also a project that approaches the portfolio with a Dashboard perspective th
 I explore this theme on the next section after the next image.
 
 <br>
+
 ### Dashboard : a cool product for a the owner of the portfolio.
 <img src="../../BRproj/portofolio/src/images/dashboard.png">
 
-## The Dashboard component idea 
+## The Dashboard component idea. 
 The Dashboard component is fully functional and updates and creates new data in the API.
 
 Back in March/ April when I was creating my portfolio I thought about how cool that would be to have in the Browser a page where I could create new upcoming projects, update or delete the existing ones, making my Portfolio online constantly up-to-date without the need to write code for it. 

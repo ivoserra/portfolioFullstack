@@ -173,7 +173,7 @@ export default function EditProject(){
                     <button className="close" onClick={closeWindow}>X</button>
                 </section>
                 :
-                <section key={project._id}>
+                <section >
                     <section className="update-header">
                         <section className="update-message">
                             {authorization && <p className="alert">{alertVisitorMsg}</p>}
