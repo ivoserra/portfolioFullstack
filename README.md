@@ -2,7 +2,7 @@
 
 ## Fullstack portfolio with its own database.
 
-<img src="../../portofolio/src/images/portfolioImage.png">
+<img src="./public/portfolioImage.png">
 
 <br>
 
@@ -23,7 +23,7 @@ I explore this theme on the next section after the next image.
 <br>
 
 ### Dashboard : a cool product for a the owner of the portfolio.
-<img src="../../BRproj/portofolio/src/images/dashboard.png">
+<img src="./public/dashboard.png">
 
 ## The Dashboard component idea. 
 The Dashboard component is fully functional and updates and creates new data in the API.
