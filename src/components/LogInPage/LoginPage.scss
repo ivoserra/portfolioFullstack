@@ -97,6 +97,34 @@
 
         }
 
+        .input-log{
+            display:flex;
+            justify-content: space-between;
+            width:70%;
+            border-bottom:2px solid rgb(175, 175, 175);
+
+            input {
+                border: none;
+                padding: 10px;
+                font-size: 1rem;
+                width: 70%;
+            }
+
+                
+            &:focus {
+                outline: none;
+                border:none;
+            }
+
+            .eye{
+                border:none;
+                background-color: #ffffff;
+                font-size: 1.5rem;
+                color:#808080;
+            }
+
+        }
+
         .log-header {
             width: 100%;
             display: flex;
@@ -136,8 +164,7 @@
                 }
 
 
-                input[type="text"],
-                input[type="password"] {
+                input[type="text"], input[type="password"]{
                     border: none;
                     border-bottom: 2px solid rgb(175, 175, 175);
                     padding: 10px;
@@ -151,12 +178,14 @@
 
                 }
 
+                
+
                 .alert {
                     text-align: center;
                     width: 100%;
                     height: 30px;
                     font-size: 0.8rem;
-                    color: red;
+                    color: #ff0000;
 
                 }
 
@@ -165,7 +194,7 @@
                     text-align: center;
                     height: 2rem;
                     font-size: 1rem;
-                    color: red;
+                    color: #ff0000;
                 }
             }
 

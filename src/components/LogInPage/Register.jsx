@@ -1,5 +1,6 @@
 import React, {useContext, useState}from 'react'
 import { UserContext } from '../Context/UserContext'
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 
 import './LoginPage.scss'
 
@@ -12,6 +13,7 @@ export const Register = () => {
     const [ errors, setErrors]=useState([])
     const [ name, setName]=useState('')
     const [ password, setPassword]=useState('')
+    const [ showPassword, setShowPassword]=useState(false)
 
 
     function registerUser(e) {
@@ -58,16 +60,19 @@ export const Register = () => {
                 <p>Once you register and login there is a delete profile button before you decide to logout , if thats your wish!</p>
                 <p>enjoy ! Ivo serra</p>
             </section>
-            <form className="reg-form" onSubmit={registerUser}>
+            <section className="reg-form">
                 <h1>register here</h1>
                 <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="name"></input>
                 {errors && errors.map((item, i) => <p key={i} className="alert">{item.username}</p>)}
-                <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="password"></input>
+                <section className='input-log'>
+                    <input type={showPassword ? "text":"password"} value={password} onChange={e => setPassword(e.target.value)} placeholder="password"></input>
+                    <button className="eye" onClick={e => setShowPassword(!showPassword)}>{showPassword ? <AiOutlineEye/> : <AiOutlineEyeInvisible/> }</button>
+                </section>
                 {errors && errors.map((item, i) => <p key={i} className="alert">{item.password}</p>)}
                 {registerMsg && <p className="alert">{registerMsg}</p>}
 
-                <button className="button">submit</button>
-            </form>
+                <button className="button" onClick={registerUser}>submit</button>
+            </section>
         </section>
   )
 }

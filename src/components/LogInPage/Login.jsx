@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { UserContext } from '../Context/UserContext'
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 
 import './LoginPage.scss'
 
@@ -12,6 +13,7 @@ export const Login = () => {
     const [ errors, setErrors]=useState([])
     const [ name, setName]=useState('')
     const [password, setPassword]=useState('')
+    const [ showPassword, setShowPassword]=useState(false)
 
     function logUser(e){
         e.preventDefault()
@@ -52,20 +54,24 @@ export const Login = () => {
 
 
 
+
+
+
   return (
 
-      <form className="login-form" onSubmit={logUser}>
+      <section className="login-form" >
           <h1>login</h1>
           <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="name"></input>
           {errors && errors.map((item, i) => <p key={i} className="alert">{item.username}</p>)}
-          <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="password"></input>
-
-
+          <section className="input-log">
+            <input type={showPassword ? "text" : "password"} value={password} onChange={e => setPassword(e.target.value)} placeholder="password"></input>
+            <button className="eye" onClick={e => setShowPassword(!showPassword)}>{showPassword ? <AiOutlineEye/> : <AiOutlineEyeInvisible/> }</button>
+          </section>
           {errors && errors.map((item, i) => <p key={i} className="alert">{item.password}</p>)}
           {alert && <section className="alert"><p className="alert">{alert}</p></section>}
 
-          <button className="button">submit</button>
-      </form>
+          <button className="button" onClick={logUser}>submit</button>
+      </section>
                           
   )
 }
