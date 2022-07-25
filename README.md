@@ -24,7 +24,7 @@ This project was deployed on Github.
 
 ### Dashboard : a cool product for update your projects on the portfolio.
 
-## The Dashboard component idea. 
+## The Dashboard feature. 
 The Dashboard component is fully functional were I update, delete and create new projects on the browser.
 This idea came to instigate to learn more and a great excuse to learn more about backend, fetching, sanitize,  dealing with errors, and to create error messages. The dashboard is functional , it was designed for the owner and later I had the idea to have implement logic for a visitor. 
 
