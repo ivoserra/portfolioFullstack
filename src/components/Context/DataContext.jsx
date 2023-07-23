@@ -2,8 +2,7 @@ import React from 'react'
 // import data from '../../Data/data.js'
 import { useState, useEffect } from 'react'
 import UserContextProvider from './UserContext'
-
-
+import apiData from '../../Data/data'
 
 
 export const DataContext = React.createContext(null)
@@ -40,7 +39,7 @@ export default function DataContextProvider(props){
 
     useEffect(()=>{
 
-        fetch(" https://ivoserrawebdev.herokuapp.com/project")
+   /*      fetch(" http://localhost:8000/project")
         .then(response=> response.json())
         .then(result => {
             if(result.confirm){
@@ -50,7 +49,9 @@ export default function DataContextProvider(props){
             }
        
         })
-        .catch(error => console.log(error.message))
+        .catch(error => console.log(error.message)) */
+
+        setData(apiData)
 
     },[render])
 

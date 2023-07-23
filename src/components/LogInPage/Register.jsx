@@ -20,7 +20,8 @@ export const Register = () => {
         e.preventDefault()
         setErrors([])
 
-        const url = ' https://ivoserrawebdev.herokuapp.com/user/register'
+        //const url = ' https://ivoserrawebdev.herokuapp.com/user/register'
+        const url = 'http://localhost:8000/user/register'
         const payload = { username: name, password: password }
         const config = { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) }
 

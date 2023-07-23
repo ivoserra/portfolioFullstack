@@ -10,7 +10,7 @@ import AnimatedPage from '../Animation/AnimatedPage'
 
 export default function NavBar(){
 
-const {data} = useContext(DataContext)
+const { data } = useContext(DataContext)
 
 
 const proj = data.filter(item => item.type ==="PROJ")

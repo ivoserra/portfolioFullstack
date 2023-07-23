@@ -33,7 +33,7 @@ export default function Header(){
             <NavLink to="/" className="title subLinkOne">home</NavLink>
             <NavLink to="/about" className="title subLinkTwo">about</NavLink>
             <NavLink to="/work" className="title subLinkThree">work</NavLink>
-            <NavLink to="/dashboard" className="title subLinkFour">dashboard</NavLink>
+            {/* <NavLink to="/dashboard" className="title subLinkFour">dashboard</NavLink> */}
           </nav>
 
 

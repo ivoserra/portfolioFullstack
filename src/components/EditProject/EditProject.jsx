@@ -53,7 +53,7 @@ export default function EditProject(){
         }
 
 
-        const url = `https://ivoserrawebdev.herokuapp.com/project/${project._id}`
+        const url = `http://localhost:8000/project/${project._id}`
 
         // payload with ternary conditions so it does not overwrite old data with the empty inputs.
         const payload ={

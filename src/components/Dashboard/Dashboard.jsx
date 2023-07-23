@@ -56,7 +56,8 @@ export default function Dashboard(){
     function deleteProfile(e){
         const payload = { username : user}
         const config = { method: 'DELETE', headers:{ "Content-type":"application/json"}, body:JSON.stringify(payload)}
-        const url = " https://ivoserrawebdev.herokuapp.com/user/profile"
+        //const url = " https://ivoserrawebdev.herokuapp.com/user/profile"
+        const url ="localhost:"
         fetch(url, config)
         .then(response=>response.json())
         .then(result=>{
